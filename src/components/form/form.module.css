@@ -1,0 +1,192 @@
+.main {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  padding: 5rem;
+  box-shadow: var(--dark-shadow);
+  width: main (90%, 50rem);
+}
+
+/* Divider styling */
+.divider {
+  margin: 3rem auto;
+
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--clr-blue-5),
+    transparent
+  );
+  border: none;
+}
+
+/* Form Summary Section */
+.formSummary {
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--clr-blue-10);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--clr-blue-5);
+}
+
+.formSummary p {
+  font-size: 1.6rem;
+  color: var(--clr-grey-2);
+  margin-bottom: 1rem;
+}
+
+.formSummary p:first-child {
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: var(--clr-blue-3);
+}
+
+
+.errorMessage {
+  color: var(--clr-red);
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+/*****************************************
+ * Form
+ *****************************************/
+
+form {
+  margin: 2rem 0 4rem;
+  padding: 3em;
+  border: 2px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.6rem;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  vertical-align: top;
+}
+
+input {
+  width: 100%;
+  border: 2px solid lightgray;
+  display: inline-block;
+  padding: 1em;
+}
+
+label span {
+  position: relative;
+  font-size: 2em;
+  top: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus-visible {
+  outline: 1px solid gray;
+  outline-offset: 4px;
+  color: green;
+}
+
+/*****************************************
+ * Selection by Attribute
+ *****************************************/
+
+input[readonly] {
+  border-style: dotted;
+  color: rgb(107, 106, 106);
+  outline: none;
+}
+
+input[disabled] {
+  background-color: #eee;
+  cursor: not-allowed;
+  text-shadow: 0 1px 1px lightgray;
+}
+
+/*****************************************
+ * Validation pseudo-class (מצב)
+ *****************************************/
+
+input:placeholder-shown {
+  font-style: italic;
+}
+
+input:optional {
+  border-color: gray;
+}
+
+input:required {
+  border-color: blue;
+}
+
+input:valid {
+  background: var(--valid);
+  color: green;
+}
+
+input:invalid {
+  background: var(--invalid);
+  color: red;
+}
+
+input:invalid::placeholder {
+  color: red;
+}
+
+input + .error {
+  display: none;
+}
+
+input:invalid:not(:placeholder-shown) + .error {
+  display: block;
+  color: red;
+}
+
+/*****************************************
+ * Focusing
+ *****************************************/
+
+form:focus-within {
+  border-color: black;
+}
+
+input:focus:valid {
+  background: url('/src/assets/hand-thumbs-up.svg') no-repeat 95% 50% var(--valid);
+  background-size: 2.5rem;
+  border-color: lightgray;
+}
+
+input:focus:invalid {
+  background: url('/src/assets/exclamation-triangle.svg') no-repeat 95% 50% var(--invalid);
+  background-size: 2.5rem;
+}
+
+button {
+  background-color: var(--clr-blue-5);
+  color: var(--clr-white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: var(--clr-blue-4);
+  transform: translateY(-2px);
+  box-shadow: var(--light-shadow);
+}
+
+button:active {
+  transform: translateY(0);
+}

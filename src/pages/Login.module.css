@@ -1,0 +1,41 @@
+.loginContainer {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  direction: rtl;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.userList {
+  margin-top: 25px;
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.userList li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+  color: #444;
+}
+
+.userList li:last-child {
+  border-bottom: none;
+}
+
+.userList strong {
+  color: #d9534f;
+  margin-right: 5px;
+}

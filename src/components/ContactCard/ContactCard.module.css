@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 16px;
+  border: 2px solid #ddd;
+}
+
+.info {
+  flex: 1;
+}
+
+h3 {
+  margin: 0 0 10px;
+}
+
+p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button:not(.delete) {
+  background-color: #3498db;
+  color: white;
+}
