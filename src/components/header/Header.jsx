@@ -6,7 +6,7 @@ import classes from "./header.module.css";
 export default function Header() {
   return (
     <header className={classes.header}>
-      <h1>Router</h1>
+      {/* <h1>Router</h1> */}
     </header>
   );
 }
