@@ -21,10 +21,7 @@ export default function ContactCard({ contact, onEdit, onDelete }) {
         <p>קרבה: {contact.relation}</p>
         <div className={styles.actions}>
           <button onClick={() => setShowEdit(true)}>שנה פרטים</button>
-          <button
-            onClick={() => onDelete(contact.id)}
-            className={styles.delete}
-          >
+          <button onClick={() => onDelete(contact.id)} className={styles.delete} >
             מחק
           </button>
         </div>
